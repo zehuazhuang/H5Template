@@ -1,33 +1,53 @@
 // 金币选项数据
 export default [
   {
-    key: '223232',
-    cions: 200,
-    meney: 1.88
-  },
-  {
-    key: '322',
+    key: 'lvbsvhxcgcrvesor',
     cions: 400,
-    meney: 2.88
+    meney: 0.99
   },
   {
-    key: '111',
-    cions: 500,
-    meney: 3.88
+    key: '',
+    cions: 800,
+    meney: 1.99
   },
   {
-    key: '4444',
-    cions: 290,
-    meney: 5.88
+    key: '',
+    cions: 2190,
+    meney: 3.99
   },
   {
-    key: '555',
-    cions: 2000,
-    meney: 10.88
+    key: 'dxismgcwewhrtezo',
+    cions: 2450,
+    meney: 4.99
   },
   {
-    key: '6666',
-    cions: 5000,
-    meney: 20
-  }
+    key: '',
+    cions: 3950,
+    meney: 8.99
+  },
+  {
+    key: '',
+    cions: 4900,
+    meney: 9.99
+  },
+    {
+    key: '',
+    cions: 5700,
+    meney: 13.99
+  },
+    {
+    key: '',
+    cions: 9800,
+    meney: 19.99
+  },
+    {
+    key: '',
+    cions: 24500,
+    meney: 49.99
+  },
+    {
+    key: '',
+    cions: 49000,
+    meney: 99.99
+  },
 ] as CoinInfo[]
