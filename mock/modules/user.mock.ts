@@ -1,6 +1,6 @@
 // 当前登录人用户信息
 export default {
-  userId: 'u99',
+  userId: 'yh1',
   email: 'test@gmail.com',
   password: '',
   avator: '',
