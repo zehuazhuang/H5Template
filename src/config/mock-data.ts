@@ -47,7 +47,7 @@ window.publishImageListJson = window.publishImageListJson || [
 
 /** 聊天机器人说明 */
 window.chatBotDesc = window.chatBotDesc || {
-  title: '这个是标题',
-  content: '内容说明',
-  points: 100
+  title: 'AI Suggestions',
+  content: "Hi! I'm Kico, your friendly AI companion here to chat about all your passions and interests. Whether you love fashion, art, music, or anything in between, I'm here to explore ideas, share tips, and keep the conversation fun and inspiring. Ready to dive into your favorite hobbies together? Let's talk and discover something new every day!",
+  points: 200
 }
