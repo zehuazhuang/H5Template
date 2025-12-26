@@ -6,10 +6,10 @@ export default {
   avator: '',
   name: 'laiyla',
   about: '这个人很棒',
-  coins: 100,
+  coins: 0,
   follow: [],
   fans: [],
-  blockList: ['u24'],
-  picPostLikeIds: ['1'],
-  videoPostLikeIds: ['1']
+  blockList: [],
+  picPostLikeIds: [],
+  videoPostLikeIds: []
 } as UserInfo
