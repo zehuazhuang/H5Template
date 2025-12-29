@@ -141,7 +141,15 @@ export default {
   },
   /** 发布动态 */
   sendDynamicStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
   },
   /** 聊天机器人 */
   chatViewStyle: {
@@ -180,7 +188,15 @@ export default {
   },
   /** 聊天详情样式 */
   chatDetailsStyle: {
-    backgroundColor: '#0e080f',
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
     /** 顶部文本样式 */
     topTextStyle: {
       borderRadius: '20px',
@@ -217,7 +233,15 @@ export default {
   },
   /** 发布视频样式 */
   publishVideoStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
   },
   /** 其他用户主页样式 */
   otherHomeStyle: {
@@ -272,7 +296,15 @@ export default {
   },
   /** 举报样式 */
   reportIndexStyle: {
-    backgroundColor: '#0e080f',
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
     /** 选项样式 */
     selectBtnStyle: {
       width: '164px',
@@ -286,7 +318,15 @@ export default {
   },
   /** 私聊样式 */
   privateChatStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
   },
   /** 设置页样式 */
   settingStyle: {
@@ -319,24 +359,64 @@ export default {
   },
   /** 关注页样式 */
   followStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
     
   },
   /** 粉丝页样式 */
   fansStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
   },
   /** 黑名单页样式 */
   blackListStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
   },
   /** 编辑页样式 */
   editStyle: {
-    backgroundColor: '#0e080f'
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
   },
   /** 金币充值 */
   coinStyle: {
-    backgroundColor: '#0e080f',
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
     /** 选项设置 */
     selectBtnStyle: {
       width: '105px',
