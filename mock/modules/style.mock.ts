@@ -120,7 +120,7 @@ export default {
     /** 发送背景色 */
     sendBgColor: '#434044',
     /** 接收背景色 */
-    receiveBgColor: 'linear-gradient(157.71deg, rgba(255, 94, 135, 1) 0%, rgba(71, 252, 255, 1) 100%)'
+    receiveBgColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)'
   },
   /** 举报按钮 */
   reportBtnStyle: {
@@ -212,7 +212,7 @@ export default {
       width: '162px',
       height: '53px',
       borderRadius: '20px',
-      backgroundColor: 'rgba(255, 255, 255, 0.2)'
+      backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)'
     }
   },
   /** 发布视频样式 */
@@ -278,7 +278,7 @@ export default {
       width: '164px',
       height: '115px',
       borderRadius: '20px',
-      backgroundColor: 'rgba(35, 30, 36, 1)',
+      backgroundColor: 'rgba(255, 255, 255, 0.1)',
       fontSize: '16px',
       fontWeight: '400',
       color: '#fff'
@@ -293,7 +293,7 @@ export default {
     backgroundColor: '#0e080f',
     /** 按钮文本样式 */
     btnTextStyle: {
-      backgroundColor: 'linear-gradient(136deg, rgba(255, 94, 135, 1) 60%, rgba(71, 252, 255, 1) 100%)',
+      backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)',
       fontSize: '16px',
       fontWeight: '400',
       color: '#fff'
@@ -334,7 +334,7 @@ export default {
       height: '100px',
       borderRadius: '24px',
       backgroundColor: 'rgba(35, 30, 36, 1)',
-      selectedColor: 'linear-gradient(151.23deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)'
+      selectedColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)'
     }
   }
 } satisfies Window['styleJson']
