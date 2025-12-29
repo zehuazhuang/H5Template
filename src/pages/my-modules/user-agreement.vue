@@ -9,8 +9,6 @@
     <p>
       Holiy User Agreement
 
-Effective Date: 2025
-
 Welcome to Holiy – Move, Create, and Dance Together (hereinafter referred to as "Holiy" or "the Application"). Holiy is a creative and social application for dancers and dance enthusiasts worldwide, providing functions such as dance video recording and sharing, content publishing, community interaction, and AI creative assistance.
 
 Before using Holiy, please carefully read and fully understand this User Agreement (hereinafter referred to as "this Agreement"). Once you register, log in, or use Holiy, you are deemed to have agreed to and accepted all the contents of this Agreement.

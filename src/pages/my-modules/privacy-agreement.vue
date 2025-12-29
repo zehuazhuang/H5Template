@@ -9,8 +9,6 @@
    
     <p>Holiy Privacy Policy
 
-Effective Date: 2025
-
 Holiy takes user privacy and personal information protection very seriously. This Privacy Policy explains how we collect, use, store, and protect your information.
 
 I. Information We Collect
