@@ -102,7 +102,7 @@ export default {
   /** 高亮按钮样式 */
   highlightBtnStyle: {
     color: 'rgba(255, 255, 255, 1)',
-    backgroundColor: 'linear-gradient(151.23deg, rgba(71, 252, 255, 1) 0%, rgba(255, 94, 135, 1) 100%)'
+    backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)'
   },
   /** 确认按钮样式 */
   confirmBtnStyle: {
