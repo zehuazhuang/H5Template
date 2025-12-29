@@ -64,8 +64,8 @@ export default {
     placeholderCorlor: 'rgba(255, 255, 255, 0.4)',
     /** 右侧发送图标 */
     sendIcon: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/holiy_input_send.png',
-    sendIconWidth: '21px',
-    sendIconHeight: '21px',
+    sendIconWidth: '32px',
+    sendIconHeight: '32px',
   },
   /** 表单标题样式 */
   formTitleStyle: {
@@ -181,7 +181,7 @@ export default {
       /** 背景样式 */
       bgImageStyle: {
         width: '280px',
-        height: '355px',
+        height: '190px',
         bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_ai_pay_bg.png',//未改
       }
     }
