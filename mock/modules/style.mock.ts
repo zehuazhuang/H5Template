@@ -174,7 +174,7 @@ export default {
       bgImageStyle: {
         width: '375px',
         height: '355px',
-        bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/holiy_ai_backg.png',
+        bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_ai_pay_bg.png',
       }
     }
   },
@@ -223,7 +223,7 @@ export default {
   otherHomeStyle: {
     backgroundColor: '#0e080f',
     /** 关注他人图标 */
-    addIcon: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_follow.png',
+    addIcon: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/holiy_follow.png',
     addIconWidth: '20px',
     addIconHeight: '20px',
     /** 留言图标 */
@@ -290,7 +290,7 @@ export default {
   },
   /** 设置页样式 */
   settingStyle: {
-    backgroundColor: '#0e080f',
+    backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)',
     /** 按钮文本样式 */
     btnTextStyle: {
       backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)',
