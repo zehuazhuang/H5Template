@@ -18,7 +18,7 @@ export default {
     height: '24px', //图标高度
   },
   /** 点赞图标 */
-  likeIcon: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_like.png',
+  likeIcon: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_like.png',//未改
 
   /** 点赞图标大小 */
   unlikeImageSize: {
@@ -172,9 +172,9 @@ export default {
       },
       /** 背景样式 */
       bgImageStyle: {
-        width: '375px',
+        width: '280px',
         height: '355px',
-        bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_ai_pay_bg.png',
+        bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/sivio_ai_pay_bg.png',//未改
       }
     }
   },
@@ -290,7 +290,15 @@ export default {
   },
   /** 设置页样式 */
   settingStyle: {
-    backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)',
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
     /** 按钮文本样式 */
     btnTextStyle: {
       backgroundColor: 'linear-gradient(180deg,rgba(112, 4, 178, 1) 0%, rgba(193, 94, 255, 1) 100%)',
@@ -312,6 +320,7 @@ export default {
   /** 关注页样式 */
   followStyle: {
     backgroundColor: '#0e080f'
+    
   },
   /** 粉丝页样式 */
   fansStyle: {
