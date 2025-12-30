@@ -46,7 +46,7 @@
         <li ai-input-title>{{ winChatBotDesc.title }}</li>
         <li
           ai-text-desc
-          class="mt-7 !text-[var(--ai-chat-view-text-color)] content_box"
+          class="mt-4 !text-[var(--ai-chat-view-text-color)] content_box"
         >
           {{ winChatBotDesc.content }}
         </li>
