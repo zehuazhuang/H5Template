@@ -180,8 +180,8 @@ export default {
       },
       /** 背景样式 */
       bgImageStyle: {
-        width: '280px',
-        height: '190px',
+        width: '375px',
+        height: '355px',
         bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/holiy_ai_backg.png',
       }
     }
