@@ -155,7 +155,15 @@ export default {
   chatViewStyle: {
     /** 描述文本颜色 */
     textCorlor: 'rgba(255, 255, 255, 0.6)',
-    backgroundColor: '#0e080f',
+    backgroundColor: `
+    radial-gradient(
+      70% 20% at 50% 0%,
+      rgba(203, 53, 255, 0.9) 0%,
+      rgba(203, 53, 255, 0.4) 40%,
+      rgba(203, 53, 255, 0) 100%
+    ),
+    #131419
+  `,
     btnStyle: {
       width: '227px',
       height: '56px',
