@@ -141,15 +141,7 @@ export default {
   },
   /** 发布动态 */
   sendDynamicStyle: {
-    backgroundColor: `
-    radial-gradient(
-      70% 20% at 50% 0%,
-      rgba(203, 53, 255, 0.9) 0%,
-      rgba(203, 53, 255, 0.4) 40%,
-      rgba(203, 53, 255, 0) 100%
-    ),
-    #131419
-  `,
+    backgroundColor: 'rgba(203, 53, 255, 0)'
   },
   /** 聊天机器人 */
   chatViewStyle: {
