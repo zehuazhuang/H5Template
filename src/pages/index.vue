@@ -34,7 +34,7 @@ const language = computed(
 )
 
 function onLanguageConfirm(event: { selectedOptions: PickerColumn }) {
-  locale.value = event.selectedOptions[0].value as string
+  locale.value = event.selectedOptions[1].value as string
   showLanguagePicker.value = false
 }
 </script>
