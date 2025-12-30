@@ -141,21 +141,21 @@ export default {
   },
   /** 发布动态 */
   sendDynamicStyle: {
-    backgroundColor: 'rgba(203, 53, 255, 0)'
-  },
-  /** 聊天机器人 */
-  chatViewStyle: {
-    /** 描述文本颜色 */
-    textCorlor: 'rgba(255, 255, 255, 0.6)',
     backgroundColor: `
     radial-gradient(
       70% 20% at 50% 0%,
       rgba(203, 53, 255, 0.9) 0%,
       rgba(203, 53, 255, 0.4) 40%,
-      rgba(203, 53, 255, 0) 100%
+      
     ),
     #131419
   `,
+  },
+  /** 聊天机器人 */
+  chatViewStyle: {
+    /** 描述文本颜色 */
+    textCorlor: 'rgba(255, 255, 255, 0.6)',
+    backgroundColor: ' rgba(203, 53, 255, 0)',
     btnStyle: {
       width: '227px',
       height: '56px',
