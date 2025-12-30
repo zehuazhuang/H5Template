@@ -41,7 +41,7 @@
 <template>
   <div relative class="chat-view_box">
     <van-image :src="ChatBack" fit="cover" class="top-back" />
-    <div class="text-center w-full top-34vh absolute">
+    <div class="text-center w-full top-28vh absolute">
       <ul p-layout-padding>
         <li ai-input-title>{{ winChatBotDesc.title }}</li>
         <li

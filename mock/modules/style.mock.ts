@@ -182,7 +182,7 @@ export default {
       bgImageStyle: {
         width: '280px',
         height: '190px',
-        bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/holiy_ai_backg.png',//未改
+        bgImg: 'https://huanniuchat.oss-accelerate.aliyuncs.com/template_development/holiy_ai_backg.png',
       }
     }
   },
