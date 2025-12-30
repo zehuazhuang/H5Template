@@ -104,14 +104,7 @@
       />
     </div>
 
-    <div px-layout-padding pt-6>
-      <div ai-input-title style="margin-bottom: 16px">About me</div>
-      <van-field
-        v-model="formData.about"
-        placeholder="Please enter"
-        class="public-input"
-      />
-    </div>
+
 
     <!-- 底部按钮 -->
     <div mt-50 flex justify-center>
