@@ -30,24 +30,24 @@ export default [
     cions: 4900,
     meney: 9.99
   },
-    {
+  {
     key: 'twjybkpldatowjt',
     cions: 5700,
-    meney: 13.99
+    meney: 14.99
   },
-    {
+  {
     key: 'siwrcpcyptnbbnnk',
     cions: 9800,
     meney: 19.99
   },
-    {
+  {
     key: 'iousphcwlfnerxvi',
     cions: 24500,
     meney: 49.99
   },
-    {
+  {
     key: 'rjtxewbnhsxawygv',
     cions: 49000,
     meney: 99.99
-  },
+  }
 ] as CoinInfo[]
