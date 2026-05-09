@@ -161,7 +161,7 @@
           :class="{ active: formData.gender === 'male' }"
           @click="formData.gender = 'male'"
         >
-          ♂
+          <span class="gender-icon">♂</span>
         </button>
         <button
           type="button"
@@ -169,7 +169,7 @@
           :class="{ active: formData.gender === 'female' }"
           @click="formData.gender = 'female'"
         >
-          ♀
+          <span class="gender-icon">♀</span>
         </button>
       </div>
 
@@ -281,23 +281,33 @@
   .gender-row {
     display: flex;
     align-items: center;
-    gap: 60px;
-    padding: 0 0 0 27px;
+    gap: 58px;
+    padding-left: 28px;
   }
 
   .gender-btn {
-    width: 46px;
-    height: 46px;
+    width: 47px;
+    height: 47px;
     border: 0;
     border-radius: 50%;
     background: #fff;
-    font-size: 29px;
-    font-weight: 600;
-    text-align: center;
     display: flex;
     align-items: center;
     justify-content: center;
     padding: 0;
+  }
+
+  .gender-icon {
+    display: block;
+    width: 24px;
+    height: 24px;
+    color: currentColor;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 30px;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    transform: translateY(-1px);
   }
 
   .gender-btn.is-male {
