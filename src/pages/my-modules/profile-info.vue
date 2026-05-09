@@ -56,7 +56,6 @@
     birthday: '2003-01-01',
     location: 'United States',
     gender: 'male',
-    about: '',
     avator: userInfo.avator || ''
   })
 
@@ -83,8 +82,7 @@
 
     const data = {
       avator: imgUrl.value || userInfo.avator,
-      name: formData.name || userInfo.name,
-      aboutme: formData.about
+      name: formData.name || userInfo.name
     }
 
     closeToast()
@@ -162,13 +160,6 @@
           <span class="gender-icon">♀</span>
         </button>
       </div>
-
-      <div class="field-title about-title">About me</div>
-      <van-field
-        v-model="formData.about"
-        placeholder="Please enter"
-        class="public-input"
-      />
 
       <div flex justify-center class="save-wrap">
         <button class="save-btn" type="button" @click="onSubmit">Save</button>
@@ -313,12 +304,8 @@
     background: linear-gradient(135deg, #bf4cff 0%, #536cff 100%);
   }
 
-  .about-title {
-    margin-top: 11px;
-  }
-
   .save-wrap {
-    margin-top: 27px;
+    margin-top: 74px;
   }
 
   .save-btn {
