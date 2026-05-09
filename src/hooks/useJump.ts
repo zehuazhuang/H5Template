@@ -11,6 +11,7 @@ import { useWindow } from './useWindow'
  * uploadMessage: 更新消息
  * uploadChat: 更新聊天室
  * Recharge: 充值选项
+ * getinfo: 获取资料页信息
  */
 export type AppCommunication =
   | 'updateComment'
@@ -21,6 +22,7 @@ export type AppCommunication =
   | 'uploadMessage'
   | 'uploadChat'
   | 'Recharge'
+  | 'getinfo'
 
 /** 路由跳转 */
 export const useJump = () => {

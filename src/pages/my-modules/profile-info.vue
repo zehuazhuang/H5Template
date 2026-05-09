@@ -4,7 +4,6 @@
   import defaultHead from '@/assets/public/default-head.png'
   import { useFile } from '@/hooks/useFile'
   import { useJump } from '@/hooks/useJump'
-  import { useWindow } from '@/hooks/useWindow'
   import { useUserStore } from '@/stores'
 
   defineOptions({
@@ -13,7 +12,6 @@
 
   const { userInfo } = useUserStore()
   const { imgUrl, clickElement } = useFile()
-  const { winUserListData } = useWindow()
   const { appParams } = useJump()
 
   const locationOptions = [
@@ -84,27 +82,19 @@
     )
 
     const data = {
-      ...userInfo,
+      avator: imgUrl.value || userInfo.avator,
       name: formData.name || userInfo.name,
-      about: formData.about || userInfo.about,
-      avator: imgUrl.value || userInfo.avator
+      aboutme: formData.about
     }
-
-    const list = winUserListData.map(v => {
-      if (v.userId === data.userId) {
-        return data
-      }
-      return v
-    })
 
     closeToast()
     showSuccessToast('Saved successfully')
 
     setTimeout(() => {
       appParams({
-        key: 'updateUser',
-        value: list,
-        state: 0
+        key: 'getinfo',
+        value: data,
+        state: 1
       })
     }, 1000)
   }
