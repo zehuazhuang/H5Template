@@ -1,5 +1,5 @@
 <script setup lang="ts">
-  import { showLoadingToast } from 'vant'
+  import { showLoadingToast, showToast } from 'vant'
   import Head from '@/assets/public/Head.png'
   import { useAppImgStyle } from '@/hooks/useAppImgStyle'
   import { detailId } from '@/hooks/useDetail'
@@ -92,6 +92,14 @@
 
   const onAddChat = () => {
     if (requireSignIn()) {
+      return
+    }
+
+    const isMutualFollow = useData.userInfo.follow?.includes(userInfo.value.userId)
+      && userInfo.value.follow?.includes(useData.userInfo.userId)
+
+    if (!isMutualFollow) {
+      showToast('需要互关才能进行聊天')
       return
     }
 
