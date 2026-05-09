@@ -16,16 +16,49 @@
   const { winUserListData } = useWindow()
   const { appParams } = useJump()
 
-  const locationOptions = ['LA', 'New York', 'Chicago', 'Houston', 'Miami'].map(
-    value => ({ text: value, value })
-  )
+  const locationOptions = [
+    'United States',
+    'China',
+    'Japan',
+    'United Kingdom',
+    'Canada',
+    'Germany',
+    'France',
+    'Italy',
+    'Spain',
+    'Australia',
+    'India',
+    'Brazil',
+    'Mexico',
+    'South Korea',
+    'Russia',
+    'Netherlands',
+    'Switzerland',
+    'Sweden',
+    'Norway',
+    'Denmark',
+    'Finland',
+    'Poland',
+    'Turkey',
+    'Saudi Arabia',
+    'United Arab Emirates',
+    'Singapore',
+    'Thailand',
+    'Malaysia',
+    'Indonesia',
+    'Philippines',
+    'Vietnam',
+    'New Zealand',
+    'South Africa',
+    'Egypt'
+  ].map(value => ({ text: value, value }))
 
   const formData = reactive({
     name: userInfo.name || '',
     birthday: '2003-01-01',
-    location: 'LA',
+    location: 'United States',
     gender: 'male',
-    about: userInfo.about || '',
+    about: '',
     avator: userInfo.avator || ''
   })
 
@@ -104,14 +137,12 @@
       />
 
       <div class="field-title">Birthday</div>
-      <van-field class="public-input select-input" readonly>
-        <template #input>
-          <input v-model="formData.birthday" class="date-input" type="date">
-        </template>
-        <template #right-icon>
-          <van-icon name="arrow-down" />
-        </template>
-      </van-field>
+      <van-field
+        v-model="formData.birthday"
+        readonly
+        class="public-input select-input"
+        right-icon="arrow-down"
+      />
 
       <div class="field-title">Location</div>
       <van-field
@@ -247,24 +278,6 @@
     }
   }
 
-  .date-input {
-    width: 100%;
-    height: 100%;
-    border: 0;
-    outline: 0;
-    color: rgba(255, 255, 255, 0.86);
-    background: transparent;
-    font-size: 12px;
-  }
-
-  .date-input::-webkit-calendar-picker-indicator {
-    position: absolute;
-    inset: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0;
-  }
-
   .gender-row {
     display: flex;
     align-items: center;
@@ -280,8 +293,11 @@
     background: #fff;
     font-size: 29px;
     font-weight: 600;
-    line-height: 46px;
     text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0;
   }
 
   .gender-btn.is-male {
