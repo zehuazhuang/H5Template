@@ -99,7 +99,7 @@
       && userInfo.value.follow?.includes(useData.userInfo.userId)
 
     if (!isMutualFollow) {
-      showToast('需要互关才能进行聊天')
+      showToast('Mutual following is required to chat.')
       return
     }
 
