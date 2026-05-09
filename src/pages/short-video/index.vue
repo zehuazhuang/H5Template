@@ -37,6 +37,11 @@
     isPopup.value = true
   }
 
+  const onOpenReport = () => {
+    if (requireSignIn()) return
+    isReport.value = true
+  }
+
   const togglePlay = async () => {
     if (!videoRef.value) return
 
@@ -114,7 +119,7 @@
                 width: 'var(--report-image-width)',
                 height: 'var(--report-image-height)'
               }"
-              @click="isReport = true"
+              @click="onOpenReport"
             />
           </li>
           <li>

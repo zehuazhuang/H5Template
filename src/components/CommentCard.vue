@@ -2,10 +2,12 @@
   import Head from '@/assets/public/Head.png'
   import { useAppImgStyle } from '@/hooks/useAppImgStyle'
   import { detailId } from '@/hooks/useDetail'
+  import { useJump } from '@/hooks/useJump'
   import { useUserStore } from '@/stores'
 
   const { reportIcon } = useAppImgStyle()
   const { userInfo } = useUserStore()
+  const { appParams } = useJump()
 
   const props = withDefaults(
     defineProps<{
@@ -18,6 +20,20 @@
 
   // 举报弹框
   const isReport = ref(false)
+  const isLoginRequired = ref(false)
+
+  const onOpenReport = (id: string) => {
+    if (userInfo.userId === 'yk912') {
+      isLoginRequired.value = true
+      return
+    }
+    detailId.value = id
+    isReport.value = true
+  }
+
+  const onGoSignIn = () => {
+    appParams({ key: 'gosignin', state: 2 })
+  }
 </script>
 
 <template>
@@ -48,12 +64,7 @@
               width: 'var(--report-image-width)',
               height: 'var(--report-image-height)'
             }"
-            @click="
-              () => {
-                isReport = true
-                detailId = item.userId
-              }
-            "
+            @click="onOpenReport(item.userId)"
           />
         </li>
       </ul>
@@ -61,6 +72,10 @@
     </div>
 
     <report-box v-model:show="isReport" />
+    <login-required-popup
+      v-model:show="isLoginRequired"
+      @signin="onGoSignIn"
+    />
   </div>
 </template>
 

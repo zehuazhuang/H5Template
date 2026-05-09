@@ -12,12 +12,13 @@
   import { useWindow } from '@/hooks/useWindow'
   import { useUserStore } from '@/stores'
 
-  const { onBack, queryId } = useJump()
+  const { onBack, queryId, appParams } = useJump()
 
   const { backIcon, reportIcon } = useAppImgStyle()
 
   // 举报弹框
   const isReport = ref(false)
+  const isLoginRequired = ref(false)
 
   const route = useRoute()
   const { t } = useI18n()
@@ -102,6 +103,18 @@
   const showNavBarStyle = computed(
     () => !route.name || navBarStyle.includes(route.name)
   )
+
+  const onOpenReport = () => {
+    if (userInfo.userId === 'yk912') {
+      isLoginRequired.value = true
+      return
+    }
+    isReport.value = true
+  }
+
+  const onGoSignIn = () => {
+    appParams({ key: 'gosignin', state: 2 })
+  }
 </script>
 
 <template>
@@ -136,12 +149,16 @@
           width: 'var(--report-image-width)',
           height: 'var(--report-image-height)'
         }"
-        @click="isReport = true"
+        @click="onOpenReport"
       />
     </template>
   </VanNavBar>
 
   <report-box v-model:show="isReport" />
+  <login-required-popup
+    v-model:show="isLoginRequired"
+    @signin="onGoSignIn"
+  />
 </template>
 
 <style lang="less" scoped>

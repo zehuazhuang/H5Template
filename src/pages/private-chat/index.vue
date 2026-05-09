@@ -32,6 +32,7 @@
   const loading = ref(true)
   // 举报弹框
   const isReport = ref(false)
+  const isLoginRequired = ref(false)
 
   const getData = () => {
     const { chatUserIds } = winChatListData.find(
@@ -112,6 +113,19 @@
     onSend(e, 1)
   })
 
+  const onOpenReport = () => {
+    if (userInfo.userId === 'yk912') {
+      isLoginRequired.value = true
+      return
+    }
+    detailId.value = viewInfo.value.userId
+    isReport.value = true
+  }
+
+  const onGoSignIn = () => {
+    appParams({ key: 'gosignin', state: 2 })
+  }
+
   onMounted(() => {
     getData()
   })
@@ -152,12 +166,7 @@
           :src="RightMore"
           h-6
           w-6
-          @click="
-            () => {
-              detailId = viewInfo.userId
-              isReport = true
-            }
-          "
+          @click="onOpenReport"
         />
       </template>
     </VanNavBar>
@@ -167,6 +176,10 @@
     </div>
 
     <report-box v-model:show="isReport" />
+    <login-required-popup
+      v-model:show="isLoginRequired"
+      @signin="onGoSignIn"
+    />
   </div>
 </template>
 
