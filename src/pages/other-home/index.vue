@@ -52,8 +52,7 @@
   }
 
   const onFollow = () => {
-    if (useData.userInfo.userId === 'yk912') {
-      isLoginRequired.value = true
+    if (requireSignIn()) {
       return
     }
 
@@ -71,6 +70,14 @@
     appParams({ key: 'updateUser', value: allUserList.value, state: 1 })
   }
 
+  const requireSignIn = () => {
+    if (useData.userInfo.userId === 'yk912') {
+      isLoginRequired.value = true
+      return true
+    }
+    return false
+  }
+
   const getCurrentDateTime = (): string => {
     const now = new Date()
     const year = now.getFullYear()
@@ -84,6 +91,10 @@
   }
 
   const onAddChat = () => {
+    if (requireSignIn()) {
+      return
+    }
+
     const chatItem = winChatListData.find(v => {
       return (
         v.chatUserIds.includes(userInfo.value.userId) &&
@@ -121,6 +132,14 @@
 
   const onGoSignIn = () => {
     appParams({ key: 'gosignin', state: 2 })
+  }
+
+  const onReport = (id: string) => {
+    if (requireSignIn()) {
+      return
+    }
+    isReport.value = true
+    detailId.value = id
   }
 
   onMounted(() => {
@@ -216,12 +235,7 @@
                 width: 'var(--report-image-width)',
                 height: 'var(--report-image-height)'
               }"
-              @click.stop="
-                () => {
-                  isReport = true
-                  detailId = item.userId
-                }
-              "
+              @click.stop="onReport(item.userId)"
             />
           </li>
         </ul>

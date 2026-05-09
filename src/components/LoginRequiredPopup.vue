@@ -19,7 +19,7 @@
   >
     <div class="login-card">
       <h3>Login Required</h3>
-      <p>You need to sign in to continue.</p>
+      <p>You need to follow each other to start a conversation.</p>
     </div>
     <div class="login-arrow" />
     <button class="signin-btn" type="button" @click="emit('signin')">
@@ -30,14 +30,15 @@
 
 <style lang="less" scoped>
   :global(.login-required-overlay) {
-    background: rgba(0, 0, 0, 0.52);
+    background: transparent;
   }
 
-  :deep(.login-required-popup) {
+  :global(.login-required-popup) {
     overflow: visible;
     width: 82%;
     max-width: 310px;
-    background: transparent;
+    background: transparent !important;
+    box-shadow: none;
   }
 
   .login-card {
