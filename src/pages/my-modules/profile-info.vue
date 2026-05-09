@@ -52,7 +52,7 @@
   ].map(value => ({ text: value, value }))
 
   const formData = reactive({
-    name: userInfo.name || '',
+    name: '',
     birthday: '2003-01-01',
     location: 'United States',
     gender: 'male',
@@ -82,7 +82,7 @@
 
     const data = {
       avator: imgUrl.value || userInfo.avator,
-      name: formData.name || userInfo.name
+      name: formData.name
     }
 
     closeToast()
