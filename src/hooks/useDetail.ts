@@ -30,7 +30,23 @@ export const useDetail = () => {
   /** 视频点赞 */
   const isVideoLike = ref(false)
 
+  const isLoginRequired = ref(false)
+
   const loding = ref(true)
+
+  const isGuest = computed(() => userInfo?.userId === 'yk912')
+
+  const requireSignIn = () => {
+    if (isGuest.value) {
+      isLoginRequired.value = true
+      return true
+    }
+    return false
+  }
+
+  const onGoSignIn = () => {
+    appParams({ key: 'gosignin', state: 2 })
+  }
 
   const getData = () => {
     const userList = window?.userListJson ?? []
@@ -78,6 +94,8 @@ export const useDetail = () => {
    * @param type 0:图片 1:视频
    */
   const onSend = (v: string, _: 0 | 1 = 0) => {
+    if (requireSignIn()) return
+
     if (v) {
       const id = Date.now()
       const item: CommentInfo = {
@@ -106,6 +124,8 @@ export const useDetail = () => {
    * 图片点赞
    */
   const onLike = () => {
+    if (requireSignIn()) return
+
     if (isLike.value) {
       userInfo.picPostLikeIds = userInfo.picPostLikeIds.filter(v => v !== queryId.value)
       dynamicInfo.value.dynamicLikeCount -= 1
@@ -133,6 +153,8 @@ export const useDetail = () => {
 
   /** 视频点赞 */
   const onVideoLike = () => {
+    if (requireSignIn()) return
+
     if (isVideoLike.value) {
       userInfo.videoPostLikeIds = userInfo.videoPostLikeIds.filter(v => v !== queryId.value)
       dynamicInfo.value.dynamicLikeCount -= 1
@@ -160,6 +182,8 @@ export const useDetail = () => {
 
   /** 点击关注 */
   const onFollow = () => {
+    if (requireSignIn()) return
+
     if (userInfo.userId !== dynamicInfo.value.userId) {
       if (!userInfo.follow.includes(dynamicInfo.value.userId)) {
         userInfo.follow.push(dynamicInfo.value.userId)
@@ -186,5 +210,5 @@ export const useDetail = () => {
     getData()
   })
 
-  return { loding, dynamicInfo, commentList, isLike, isVideoLike, isFollow, onFollow, onLike, onSend, onVideoLike, onAvator }
+  return { loding, dynamicInfo, commentList, isLike, isVideoLike, isFollow, isLoginRequired, requireSignIn, onGoSignIn, onFollow, onLike, onSend, onVideoLike, onAvator }
 }

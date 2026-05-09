@@ -17,8 +17,11 @@
     commentList,
     isVideoLike,
     isFollow,
+    isLoginRequired,
+    requireSignIn,
     onAvator,
     onFollow,
+    onGoSignIn,
     onSend,
     onVideoLike
   } = useDetail()
@@ -28,6 +31,11 @@
   const isPopup = ref(false)
   // 举报弹框
   const isReport = ref(false)
+
+  const onOpenComment = () => {
+    if (requireSignIn()) return
+    isPopup.value = true
+  }
 
   const togglePlay = async () => {
     if (!videoRef.value) return
@@ -117,7 +125,7 @@
         </ul>
       </div>
       <ul class="bottom-btn">
-        <li @click="isPopup = true">
+        <li @click="onOpenComment">
           <van-image 
             :src="messageIcon" 
             class="icon-box"
@@ -161,6 +169,10 @@
     </popup-box>
 
     <report-box v-model:show="isReport" />
+    <login-required-popup
+      v-model:show="isLoginRequired"
+      @signin="onGoSignIn"
+    />
   </div>
 </template>
 

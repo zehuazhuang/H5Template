@@ -24,6 +24,7 @@
 
   // 举报弹框
   const isReport = ref(false)
+  const isLoginRequired = ref(false)
   const userInfo = ref<UserInfo>(null)
   const bottomList = ref<DynamicInfo[]>([])
   const loading = ref(true)
@@ -51,6 +52,11 @@
   }
 
   const onFollow = () => {
+    if (useData.userInfo.userId === 'yk912') {
+      isLoginRequired.value = true
+      return
+    }
+
     useData.userInfo.follow.push(userInfo.value.userId)
     userInfo.value.fans.push(useData.userInfo.userId)
     allUserList.value.forEach(v => {
@@ -111,6 +117,10 @@
         }
       })
     }
+  }
+
+  const onGoSignIn = () => {
+    appParams({ key: 'gosignin', state: 2 })
   }
 
   onMounted(() => {
@@ -244,6 +254,10 @@
     </div>
 
     <report-box v-model:show="isReport" />
+    <login-required-popup
+      v-model:show="isLoginRequired"
+      @signin="onGoSignIn"
+    />
   </div>
 </template>
 

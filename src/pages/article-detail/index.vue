@@ -16,7 +16,9 @@
     dynamicInfo,
     commentList,
     isLike,
+    isLoginRequired,
     onAvator,
+    onGoSignIn,
     onLike,
     onSend
   } = useDetail()
@@ -97,6 +99,11 @@
 
       <input-box @send="onSend" />
     </div>
+
+    <login-required-popup
+      v-model:show="isLoginRequired"
+      @signin="onGoSignIn"
+    />
   </div>
 </template>
 
