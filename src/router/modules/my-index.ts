@@ -40,6 +40,14 @@ export default [
     component: () => import('@/pages/my-modules/edit-info.vue')
   },
   {
+    path: '/profile-info',
+    name: 'ProfileInfo',
+    meta: {
+      title: 'Edit'
+    },
+    component: () => import('@/pages/my-modules/profile-info.vue')
+  },
+  {
     path: '/gold-coin',
     name: 'GoldCoin',
     meta: {
